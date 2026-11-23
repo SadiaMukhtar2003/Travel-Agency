@@ -1,303 +1,932 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Plan unforgettable journeys from Kabul with Travel Vibes. Explore destinations, meet our travel team, and start planning your trip.">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Plan unforgettable journeys from Kabul with Travel Vibes. Explore destinations, meet our travel team, and start planning your trip."
+    />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Travel Vibes | Explore the World Together</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Header: transparent navigation and a highlighted trip-planning link. -->
     <header class="site-header" id="top">
-        <nav class="nav-wrap" aria-label="Main navigation">
-            <a class="brand" href="#home" aria-label="Travel Vibes home">
-                <img src="assets/file_00000000474c82119768bdedcf3f3516.png" alt="" width="54" height="54">
-                <span><strong>Travel Vibes</strong><small>EXPLORE · DISCOVER · EXPERIENCE</small></span>
-            </a>
-            <ul class="nav-links">
-                <li><a class="active" href="#home">Home</a></li>
-                <li><a href="#destinations">Destinations</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <a class="nav-cta" href="#contact">Plan Your Trip <span aria-hidden="true">&#8594;</span></a>
-        </nav>
+      <nav class="nav-wrap" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="Travel Vibes home">
+          <img
+            src="assets/file_00000000f8088243be29624f2e84996e.png"
+            alt=""
+            width="60"
+            height="60"
+          />
+          <span
+            ><strong>Travel Vibes</strong
+            ><small>EXPLORE · DISCOVER · EXPERIENCE</small></span
+          >
+        </a>
+        <ul class="nav-links">
+          <li><a class="active" href="#home">Home</a></li>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="nav-cta" href="#contact"
+          >Plan Your Trip <span aria-hidden="true">&#8594;</span></a
+        >
+      </nav>
     </header>
 
     <main>
+      <div class="flight-continuity-group flight-continuity-lead">
         <!-- Hero: mountain-lake background, large message, and floating destination photos. -->
         <section id="home" class="hero" aria-labelledby="hero-title">
-            <img class="hero-backdrop" src="assets/hero-lake.jpg" alt="Turquoise alpine lake surrounded by snowy mountains" fetchpriority="high">
-            <div class="hero-copy">
-                <h1 id="hero-title">Explore the <span>World</span> Together</h1>
-                <p>Discover breathtaking destinations, create unforgettable memories, and let us plan your next adventure.</p>
-                <a class="button button-gold" href="#destinations">Explore Destinations <span aria-hidden="true">&#8594;</span></a>
-            </div>
-            <div class="hero-cards" aria-label="Featured destinations">
-                <figure class="hero-card hero-card-one">
-                    <img src="assets/santorini.jpg" alt="Santorini's white buildings above the Aegean Sea" width="900" height="1200">
-                    <figcaption>Santorini <span>Greece</span></figcaption>
-                </figure>
-                <figure class="hero-card hero-card-two">
-                    <img src="assets/banff.jpg" alt="Turquoise lake and snowy peaks in Banff National Park" width="900" height="1200">
-                    <figcaption>Banff <span>Canada</span></figcaption>
-                </figure>
-            </div>
-            <a class="hero-scroll" href="#highlights">Discover more <span aria-hidden="true">&#8595;</span></a>
+          <img
+            class="flight-route-marker flight-route-marker-hero"
+            src="assets/scroll-plane.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <img class="flight-route-marker flight-route-marker-hero hero-marker-two" src="assets/scroll-plane.svg" alt="" aria-hidden="true" />
+          <img class="flight-route-marker flight-route-marker-hero hero-marker-three" src="assets/scroll-plane.svg" alt="" aria-hidden="true" />
+          <img
+            class="hero-backdrop"
+            src="assets/hero-lake.jpg"
+            alt="Turquoise alpine lake surrounded by snowy mountains"
+            fetchpriority="high"
+          />
+          <div class="hero-copy">
+            <h1 id="hero-title">Explore the <span>World</span> Together</h1>
+            <p>
+              Discover breathtaking destinations, create unforgettable memories,
+              and let us plan your next adventure.
+            </p>
+            <a class="button button-gold" href="#destinations"
+              >Explore Destinations <span aria-hidden="true">&#8594;</span></a
+            >
+          </div>
+          <div class="hero-cards" aria-label="Featured destinations">
+            <figure class="hero-card hero-card-one">
+              <img
+                src="assets/santorini.jpg"
+                alt="Santorini's white buildings above the Aegean Sea"
+                width="900"
+                height="1200"
+              />
+              <figcaption>Santorini <span>Greece</span></figcaption>
+            </figure>
+            <figure class="hero-card hero-card-two">
+              <img
+                src="assets/banff.jpg"
+                alt="Turquoise lake and snowy peaks in Banff National Park"
+                width="900"
+                height="1200"
+              />
+              <figcaption>Banff <span>Canada</span></figcaption>
+            </figure>
+          </div>
+          <a class="hero-scroll" href="#highlights"
+            >Discover more <span aria-hidden="true">&#8595;</span></a
+          >
         </section>
 
         <!-- Benefits: four travel-planning promises in a compact icon row. -->
-        <section id="highlights" class="highlights section-shell" aria-label="Travel benefits">
-            <article class="highlight-item"><span class="highlight-icon" aria-hidden="true">&#9992;</span><h2>Best Price Guarantee</h2><p>Get the best deals for your dream trip.</p></article>
-            <article class="highlight-item"><span class="highlight-icon" aria-hidden="true">&#10003;</span><h2>Safe &amp; Secure</h2><p>Your safety is our priority.</p></article>
-            <article class="highlight-item"><span class="highlight-icon" aria-hidden="true">&#9742;</span><h2>24/7 Support</h2><p>We’re always here to help.</p></article>
-            <article class="highlight-item"><span class="highlight-icon" aria-hidden="true">&#9734;</span><h2>Expert Guides</h2><p>Local experts for real experiences.</p></article>
+        <section
+          id="highlights"
+          class="highlights section-shell"
+          aria-label="Travel benefits"
+        >
+          <img
+            class="flight-route-marker flight-route-marker-highlights"
+            src="assets/scroll-plane.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <img class="flight-route-marker flight-route-marker-highlights highlights-marker-two" src="assets/scroll-plane.svg" alt="" aria-hidden="true" />
+          <img class="flight-route-marker flight-route-marker-highlights highlights-marker-three" src="assets/scroll-plane.svg" alt="" aria-hidden="true" />
+          <article class="highlight-item">
+            <span class="highlight-icon" aria-hidden="true">&#36;</span>
+            <h2>Best Price Guarantee</h2>
+            <p>Get the best deals for your dream trip.</p>
+          </article>
+          <article class="highlight-item">
+            <span class="highlight-icon" aria-hidden="true">&#10003;</span>
+            <h2>Safe &amp; Secure</h2>
+            <p>Your safety is our priority.</p>
+          </article>
+          <article class="highlight-item">
+            <span class="highlight-icon" aria-hidden="true">&#9742;</span>
+            <h2>24/7 Support</h2>
+            <p>We’re always here to help.</p>
+          </article>
+          <article class="highlight-item">
+            <span class="highlight-icon" aria-hidden="true">&#9734;</span>
+            <h2>Expert Guides</h2>
+            <p>Local experts for real experiences.</p>
+          </article>
         </section>
 
         <!-- Trip introduction: a short promise with a floating travel-photo collage. -->
-        <section class="trip-intro section-shell" aria-labelledby="trip-intro-title">
-            <div class="trip-intro-copy">
-                <p class="eyebrow">Explore · Discover · Experience</p>
-                <h2 id="trip-intro-title">More Than Just a Trip</h2>
-                <p>We create journeys that inspire, connect, and leave you with stories for a lifetime.</p>
-                <div class="trip-icon-row" aria-label="Travel experiences">
-                    <span aria-label="Road trips">&#9673;</span><span aria-label="Flights">&#9992;</span><span aria-label="Photography">&#9678;</span><span aria-label="Culture">&#9825;</span><span aria-label="Nature">&#9671;</span>
-                </div>
-                <a class="text-link" href="#about">Learn More <span aria-hidden="true">&#8594;</span></a>
+        <section
+          class="trip-intro section-shell"
+          aria-labelledby="trip-intro-title"
+        >
+          <img
+            class="flight-route-marker flight-route-marker-trip"
+            src="assets/scroll-plane.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <img class="flight-route-marker flight-route-marker-trip trip-marker-two" src="assets/scroll-plane.svg" alt="" aria-hidden="true" />
+          <img class="flight-route-marker flight-route-marker-trip trip-marker-three" src="assets/scroll-plane.svg" alt="" aria-hidden="true" />
+          <div class="trip-intro-copy">
+            <p class="eyebrow">Explore · Discover · Experience</p>
+            <h2 id="trip-intro-title">More Than Just a Trip</h2>
+            <p>
+              We create journeys that inspire, connect, and leave you with
+              stories for a lifetime.
+            </p>
+            <div class="trip-icon-row" aria-label="Travel experiences">
+              <span aria-label="Road trips">&#9673;</span
+              ><span aria-label="Flight tickets">&#127915;</span
+              ><span aria-label="Photography">&#9678;</span
+              ><span aria-label="Culture">&#9825;</span
+              ><span aria-label="Nature">&#9671;</span>
             </div>
-            <div class="trip-collage" id="gallery" aria-label="Travel moments">
-                <img class="trip-photo trip-photo-one" src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&amp;fit=crop&amp;w=650&amp;q=85" alt="Colorful seaside village" width="650" height="500" loading="lazy">
-                <img class="trip-photo trip-photo-two" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&amp;fit=crop&amp;w=650&amp;q=85" alt="Mountain lake ringed by green peaks" width="650" height="500" loading="lazy">
-                <img class="trip-photo trip-photo-three" src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&amp;fit=crop&amp;w=650&amp;q=85" alt="Paris rooftops at golden hour" width="650" height="500" loading="lazy">
-            </div>
+            <a class="text-link" href="#about"
+              >Learn More <span aria-hidden="true">&#8594;</span></a
+            >
+          </div>
+          <div class="trip-collage" id="gallery" aria-label="Travel moments">
+            <img
+              class="trip-photo trip-photo-one"
+              src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&amp;fit=crop&amp;w=650&amp;q=85"
+              alt="Colorful seaside village"
+              width="650"
+              height="500"
+              loading="lazy"
+            />
+            <img
+              class="trip-photo trip-photo-two"
+              src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&amp;fit=crop&amp;w=650&amp;q=85"
+              alt="Mountain lake ringed by green peaks"
+              width="650"
+              height="500"
+              loading="lazy"
+            />
+            <img
+              class="trip-photo trip-photo-three"
+              src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&amp;fit=crop&amp;w=650&amp;q=85"
+              alt="Paris rooftops at golden hour"
+              width="650"
+              height="500"
+              loading="lazy"
+            />
+          </div>
         </section>
-
-        <!-- About: traveler photo, agency introduction, and three trust markers. -->
-        <section id="about" class="about-section section-shell" aria-labelledby="about-title">
-            <div class="about-image-wrap">
-                <img src="assets/about-traveler.jpg" alt="Travel map, camera, and backpack prepared for a journey" width="1400" height="1106">
-                <span class="image-note">Your next journey starts here</span>
+      </div>
+      <!-- About: traveler photo, agency introduction, and three trust markers. -->
+      <section
+        id="about"
+        class="about-section section-shell"
+        aria-labelledby="about-title"
+      >
+        <div class="about-image-wrap">
+          <img
+            src="assets/5f94a2439c0b629ddce2854f63e03a54.jpg"
+            alt="Travel map, camera, and backpack prepared for a journey"
+            width="1400"
+            height="1106"
+          />
+          <span class="image-note">Your next journey starts here</span>
+        </div>
+        <div class="about-copy">
+          <p class="eyebrow">A little about us</p>
+          <h2 id="about-title">About <span>Us</span></h2>
+          <p>
+            At Travel Vibes, we believe travel is more than visiting new places.
+            It’s discovering new perspectives, meeting new people, and
+            experiencing the beauty of our world.
+          </p>
+          <p>
+            Our passionate team creates personalized trips shaped around your
+            dreams, budget, and style.
+          </p>
+          <div class="about-values" aria-label="Travel Vibes at a glance">
+            <div>
+              <span class="value-icon" aria-hidden="true">&#9825;</span
+              ><strong>Trusted</strong><span>by Travelers</span>
             </div>
-            <div class="about-copy">
-                <p class="eyebrow">A little about us</p>
-                <h2 id="about-title">About <span>Us</span></h2>
-                <p>At Travel Vibes, we believe travel is more than visiting new places. It’s discovering new perspectives, meeting new people, and experiencing the beauty of our world.</p>
-                <p>Our passionate team creates personalized trips shaped around your dreams, budget, and style.</p>
-                <div class="about-values" aria-label="Travel Vibes at a glance">
-                    <div><span class="value-icon" aria-hidden="true">&#9825;</span><strong>Trusted</strong><span>by Travelers</span></div>
-                    <div><span class="value-icon" aria-hidden="true">&#9822;</span><strong>1000+</strong><span>Happy Clients</span></div>
-                    <div><span class="value-icon" aria-hidden="true">&#9737;</span><strong>Global</strong><span>Destinations</span></div>
-                </div>
+            <div>
+              <span class="value-icon" aria-hidden="true">&#9822;</span
+              ><strong>1000+</strong><span>Happy Clients</span>
             </div>
-        </section>
-
-        <!-- Destinations: selectable-looking region tabs, Asia feature, and diamond photo collage. -->
-        <section id="destinations" class="destinations-section" aria-labelledby="destinations-title">
-            <div class="section-shell destinations-inner">
-                <div class="destinations-title-row"><span></span><h2 id="destinations-title">Destinations</h2><span></span></div>
-                <ul class="region-list" aria-label="Destination regions">
-                    <li>Australia</li><li>Africa</li><li>Europe</li><li class="region-active">Asia</li><li>New Zealand</li>
-                </ul>
-                <div class="destination-feature" id="asia">
-                    <div class="destination-copy">
-                        <p class="eyebrow">Explore the beauty of</p>
-                        <h3>Asia</h3>
-                        <p>From ancient temples to modern cities, Asia offers a unique blend of culture, history, and natural beauty. Discover breathtaking landscapes, vibrant traditions, and unforgettable experiences.</p>
-                        <div class="destination-tags"><span><b aria-hidden="true">&#9961;</b> Rich Culture</span><span><b aria-hidden="true">&#9968;</b> Stunning Nature</span><span><b aria-hidden="true">&#128247;</b> Unforgettable Moments</span></div>
-                        <a class="button button-outline" href="#contact">View All Asia Tours <span aria-hidden="true">&#8594;</span></a>
-                    </div>
-                    <div class="destination-mosaic" aria-label="Asian travel destinations">
-                        <figure class="mosaic-japan"><img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="Traditional pagoda framed by cherry blossoms in Japan" width="500" height="500" loading="lazy"></figure>
-                        <figure class="mosaic-dubai"><img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="Dubai skyline at dusk" width="500" height="500" loading="lazy"></figure>
-                        <figure class="mosaic-main"><img src="https://images.unsplash.com/photo-1635346260593-bf3bb9b695e3?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Taj Mahal reflected in its garden pool" width="800" height="800" loading="lazy"></figure>
-                        <figure class="mosaic-island"><img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="Long-tail boat in clear tropical water" width="500" height="500" loading="lazy"></figure>
-                        <figure class="mosaic-thai"><img src="https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="Golden temple architecture in Thailand" width="500" height="500" loading="lazy"></figure>
-                    </div>
-                </div>
+            <div>
+              <span class="value-icon" aria-hidden="true">&#9737;</span
+              ><strong>Global</strong><span>Destinations</span>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
+      <!-- Destinations: selectable-looking region tabs, Asia feature, and diamond photo collage. -->
+      <section
+        id="destinations"
+        class="destinations-section"
+        aria-labelledby="destinations-title"
+      >
+        <div class="section-shell destinations-inner">
+          <div class="destinations-title-row">
+            <span></span>
+            <h2 id="destinations-title">Destinations</h2>
+            <span></span>
+          </div>
+          <ul class="region-list" aria-label="Destination regions">
+            <li>Australia</li>
+            <li>Africa</li>
+            <li>Europe</li>
+            <li class="region-active">Asia</li>
+            <li>New Zealand</li>
+          </ul>
+          <div class="destination-feature" id="asia">
+            <div class="destination-copy">
+              <p class="eyebrow">Explore the beauty of</p>
+              <h3>Asia</h3>
+              <p>
+                From ancient temples to modern cities, Asia offers a unique
+                blend of culture, history, and natural beauty. Discover
+                breathtaking landscapes, vibrant traditions, and unforgettable
+                experiences.
+              </p>
+              <div class="destination-tags">
+                <span><b aria-hidden="true">&#9961;</b> Rich Culture</span
+                ><span><b aria-hidden="true">&#9968;</b> Stunning Nature</span
+                ><span
+                  ><b aria-hidden="true">&#128247;</b> Unforgettable
+                  Moments</span
+                >
+              </div>
+              <a class="button button-outline" href="#contact"
+                >View All Asia Tours <span aria-hidden="true">&#8594;</span></a
+              >
+            </div>
+            <div
+              class="destination-mosaic"
+              aria-label="Asian travel destinations"
+            >
+              <figure class="mosaic-japan">
+                <img
+                  src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&amp;fit=crop&amp;w=700&amp;q=85"
+                  alt="Traditional pagoda framed by cherry blossoms in Japan"
+                  width="500"
+                  height="500"
+                  loading="lazy"
+                />
+              </figure>
+              <figure class="mosaic-dubai">
+                <img
+                  src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&amp;fit=crop&amp;w=700&amp;q=85"
+                  alt="Dubai skyline at dusk"
+                  width="500"
+                  height="500"
+                  loading="lazy"
+                />
+              </figure>
+              <figure class="mosaic-main">
+                <img
+                  src="https://images.unsplash.com/photo-1635346260593-bf3bb9b695e3?auto=format&amp;fit=crop&amp;w=1000&amp;q=85"
+                  alt="Taj Mahal reflected in its garden pool"
+                  width="800"
+                  height="800"
+                  loading="lazy"
+                />
+              </figure>
+              <figure class="mosaic-island">
+                <img
+                  src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&amp;fit=crop&amp;w=700&amp;q=85"
+                  alt="Long-tail boat in clear tropical water"
+                  width="500"
+                  height="500"
+                  loading="lazy"
+                />
+              </figure>
+              <figure class="mosaic-thai">
+                <img
+                  src="https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&amp;fit=crop&amp;w=700&amp;q=85"
+                  alt="Golden temple architecture in Thailand"
+                  width="500"
+                  height="500"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+            <!-- Exclusive tour: scenic banner and a small stack of trip photos. -->
+      <section class="tour-banner" aria-labelledby="tour-title">
+        <img
+          class="tour-background"
+          src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&amp;fit=crop&amp;w=2000&amp;q=85"
+          alt="Golden-hour light over a mountain landscape"
+          width="2000"
+          height="600"
+          loading="lazy"
+        />
+        <div class="tour-mini-collage" aria-hidden="true">
+          <img
+            src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&amp;fit=crop&amp;w=300&amp;q=80"
+            alt=""
+          />
+          <img
+            src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&amp;fit=crop&amp;w=300&amp;q=80"
+            alt=""
+          />
+          <img
+            src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&amp;fit=crop&amp;w=300&amp;q=80"
+            alt=""
+          />
+        </div>
+        <div class="tour-banner-copy">
+          <p class="eyebrow">Curated just for you</p>
+          <h2 id="tour-title">Exclusive <span>Tour</span></h2>
+          <p>
+            Discover exclusive travel experiences designed for unforgettable
+            moments. Explore hidden gems, enjoy premium service, and travel in
+            style.
+          </p>
+          <a class="button button-gold" href="#contact"
+            >Explore Now <span aria-hidden="true">&#8594;</span></a
+          >
+        </div>
+      </section>
+
+      <div class="flight-continuity-group flight-continuity-stories">
         <!-- Why us: four compact service points with circular icons. -->
-        <section class="reasons-section section-shell" aria-labelledby="reasons-title">
-            <div class="reasons-copy">
-                <div class="reasons-heading"><div><p class="eyebrow">Travel made personal</p><h2 id="reasons-title">Why Travel with <span>NavikX</span></h2><p>More than just trips — we create experiences.</p></div></div>
-                <div class="reasons-grid">
-                    <article><span class="reason-icon" aria-hidden="true">&#9671;</span><h3>Unique Experiences</h3><p>Find moments you’ll remember.</p></article>
-                    <article><span class="reason-icon" aria-hidden="true">&#9822;</span><h3>Expert Guidance</h3><p>Local insight, thoughtful plans.</p></article>
-                    <article><span class="reason-icon" aria-hidden="true">&#10010;</span><h3>Safe &amp; Reliable</h3><p>Travel with peace of mind.</p></article>
-                    <article><span class="reason-icon" aria-hidden="true">&#9829;</span><h3>Memories for a Lifetime</h3><p>Stories worth bringing home.</p></article>
-                </div>
+        <section
+          class="reasons-section section-shell"
+          aria-labelledby="reasons-title"
+        >
+          <img
+            class="flight-route-marker flight-route-marker-reasons reasons-marker-one"
+            src="assets/scroll-plane.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <img
+            class="flight-route-marker flight-route-marker-reasons reasons-marker-two"
+            src="assets/scroll-plane.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <img
+            class="flight-route-marker flight-route-marker-reasons reasons-marker-three"
+            src="assets/scroll-plane.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <div class="reasons-copy">
+            <div class="reasons-heading">
+              <div>
+                <p class="eyebrow">Travel made personal</p>
+                <h2 id="reasons-title">Why Travel with <span>US</span></h2>
+                <p>More than just trips — we create experiences.</p>
+              </div>
             </div>
-            <div class="reasons-collage" aria-label="Travel moments">
-                <img class="reasons-photo reasons-photo-one" src="assets/banff.jpg" alt="Mountain lake travel scene" loading="lazy">
-                <img class="reasons-photo reasons-photo-two" src="assets/santorini.jpg" alt="Seaside destination at sunset" loading="lazy">
-                <img class="reasons-photo reasons-photo-three" src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&amp;fit=crop&amp;w=500&amp;q=80" alt="Traditional architecture in Japan" loading="lazy">
-                <img class="reasons-photo reasons-photo-four" src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&amp;fit=crop&amp;w=500&amp;q=80" alt="Island scenery in Asia" loading="lazy">
-                <p>Explore<br>Dream<br>Discover</p>
+            <div class="reasons-grid">
+              <article>
+                <span class="reason-icon" aria-hidden="true">&#9671;</span>
+                <h3>Unique Experiences</h3>
+                <p>Find moments you’ll remember.</p>
+              </article>
+              <article>
+                <span class="reason-icon" aria-hidden="true">&#9822;</span>
+                <h3>Expert Guidance</h3>
+                <p>Local insight, thoughtful plans.</p>
+              </article>
+              <article>
+                <span class="reason-icon" aria-hidden="true">&#10010;</span>
+                <h3>Safe &amp; Reliable</h3>
+                <p>Travel with peace of mind.</p>
+              </article>
+              <article>
+                <span class="reason-icon" aria-hidden="true">&#9829;</span>
+                <h3>Memories for a Lifetime</h3>
+                <p>Stories worth bringing home.</p>
+              </article>
             </div>
+          </div>
+          <div class="reasons-collage" aria-label="Travel moments">
+            <img
+              class="reasons-photo reasons-photo-one"
+              src="assets/banff.jpg"
+              alt="Mountain lake travel scene"
+              loading="lazy"
+            />
+            <img
+              class="reasons-photo reasons-photo-two"
+              src="assets/santorini.jpg"
+              alt="Seaside destination at sunset"
+              loading="lazy"
+            />
+            <img
+              class="reasons-photo reasons-photo-three"
+              src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&amp;fit=crop&amp;w=500&amp;q=80"
+              alt="Traditional architecture in Japan"
+              loading="lazy"
+            />
+            <img
+              class="reasons-photo reasons-photo-four"
+              src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&amp;fit=crop&amp;w=500&amp;q=80"
+              alt="Island scenery in Asia"
+              loading="lazy"
+            />
+            <p>Explore<br />Dream<br />Discover</p>
+          </div>
         </section>
 
         <!-- Stories: scrollable testimonial cards with previous and next controls. -->
-        <section id="stories" class="stories-section" aria-labelledby="stories-title">
-            <div class="section-shell">
-                <div class="stories-heading">
-                    <div>
-                        <p class="eyebrow">Real journeys, real memories</p>
-                        <h2 id="stories-title">Traveler Stories</h2>
-                    </div>
-                    <a class="text-link" href="#contact">More All Reviews <span aria-hidden="true">&#8594;</span></a>
-                </div>
-                <div class="stories-carousel">
-                    <button class="carousel-arrow" type="button" data-story-direction="previous" aria-label="Previous traveler stories">&#8592;</button>
-                    <div class="stories-window" aria-label="Traveler testimonials" tabindex="0">
-                        <div class="stories-track">
-                            <figure class="story-card" id="story-one">
-                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;w=180&amp;h=180&amp;q=85" alt="Traveler Daniel" width="90" height="90" loading="lazy">
-                                <div class="story-copy">
-                                    <blockquote><p>“You made our trip amazing from start to finish. The plan was perfect, and every day felt unforgettable.”</p></blockquote>
-                                    <figcaption><strong>Daniel K.</strong><span>Kabul, Afghanistan</span></figcaption>
-                                </div>
-                            </figure>
-                            <figure class="story-card" id="story-two">
-                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;w=180&amp;h=180&amp;q=85" alt="Traveler Sophia" width="90" height="90" loading="lazy">
-                                <div class="story-copy">
-                                    <blockquote><p>“Travel Vibes made our Europe trip so easy and enjoyable. The recommendations were thoughtful and personal.”</p></blockquote>
-                                    <figcaption><strong>Sophia M.</strong><span>Kabul, Afghanistan</span></figcaption>
-                                </div>
-                            </figure>
-                            <figure class="story-card" id="story-three">
-                                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&amp;fit=crop&amp;w=180&amp;h=180&amp;q=85" alt="Traveler Amir" width="90" height="90" loading="lazy">
-                                <div class="story-copy">
-                                    <blockquote><p>“The team listened to what we wanted and built a journey that felt completely our own.”</p></blockquote>
-                                    <figcaption><strong>Amir R.</strong><span>Kabul, Afghanistan</span></figcaption>
-                                </div>
-                            </figure>
-                            <figure class="story-card" id="story-four">
-                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&amp;fit=crop&amp;w=180&amp;h=180&amp;q=85" alt="Traveler Leila" width="90" height="90" loading="lazy">
-                                <div class="story-copy">
-                                    <blockquote><p>“From our first question to the flight home, everything was clear, warm, and well organized.”</p></blockquote>
-                                    <figcaption><strong>Leila A.</strong><span>Kabul, Afghanistan</span></figcaption>
-                                </div>
-                            </figure>
-                        </div>
-                    </div>
-                    <button class="carousel-arrow" type="button" data-story-direction="next" aria-label="Next traveler stories">&#8594;</button>
-                </div>
+        <section
+          id="stories"
+          class="stories-section"
+          aria-labelledby="stories-title"
+        >
+          <img
+            class="flight-route-marker flight-route-marker-stories stories-marker-one"
+            src="assets/scroll-plane.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <img
+            class="flight-route-marker flight-route-marker-stories stories-marker-two"
+            src="assets/scroll-plane.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <img
+            class="flight-route-marker flight-route-marker-stories stories-marker-three"
+            src="assets/scroll-plane.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <div class="section-shell">
+            <div class="stories-heading">
+              <div>
+                <h2 id="stories-title">Traveler Stories</h2>
+                <p class="eyebrow">Real journeys, Real happiness</p>
+              </div>
+              <a class="text-link" href="#contact"
+                >More All Reviews <span aria-hidden="true">&#8594;</span></a
+              >
             </div>
+            <div class="stories-carousel">
+              <button
+                class="carousel-arrow"
+                type="button"
+                data-story-direction="previous"
+                aria-label="Previous traveler stories"
+              >
+                &#8592;
+              </button>
+              <div
+                class="stories-window"
+                aria-label="Traveler testimonials"
+                tabindex="0"
+              >
+                <div class="stories-track">
+                  <figure class="story-card" id="story-one">
+                    <img
+                      src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;w=180&amp;h=180&amp;q=85"
+                      alt="Traveler Daniel"
+                      width="90"
+                      height="90"
+                      loading="lazy"
+                    />
+                    <div class="story-copy">
+                      <blockquote>
+                        <p>
+                          “You made our trip amazing from start to finish. The
+                          plan was perfect, and every day felt unforgettable.”
+                        </p>
+                      </blockquote>
+                      <figcaption>
+                        <strong>Daniel K.</strong
+                        ><span>Kabul, Afghanistan</span>
+                      </figcaption>
+                    </div>
+                  </figure>
+                  <figure class="story-card" id="story-two">
+                    <img
+                      src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;w=180&amp;h=180&amp;q=85"
+                      alt="Traveler Sophia"
+                      width="90"
+                      height="90"
+                      loading="lazy"
+                    />
+                    <div class="story-copy">
+                      <blockquote>
+                        <p>
+                          “Travel Vibes made our Europe trip so easy and
+                          enjoyable. The recommendations were thoughtful and
+                          personal.”
+                        </p>
+                      </blockquote>
+                      <figcaption>
+                        <strong>Sophia M.</strong
+                        ><span>Kabul, Afghanistan</span>
+                      </figcaption>
+                    </div>
+                  </figure>
+                  <figure class="story-card" id="story-three">
+                    <img
+                      src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&amp;fit=crop&amp;w=180&amp;h=180&amp;q=85"
+                      alt="Traveler Amir"
+                      width="90"
+                      height="90"
+                      loading="lazy"
+                    />
+                    <div class="story-copy">
+                      <blockquote>
+                        <p>
+                          “The team listened to what we wanted and built a
+                          journey that felt completely our own.”
+                        </p>
+                      </blockquote>
+                      <figcaption>
+                        <strong>Amir R.</strong><span>Kabul, Afghanistan</span>
+                      </figcaption>
+                    </div>
+                  </figure>
+                  <figure class="story-card" id="story-four">
+                    <img
+                      src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&amp;fit=crop&amp;w=180&amp;h=180&amp;q=85"
+                      alt="Traveler Leila"
+                      width="90"
+                      height="90"
+                      loading="lazy"
+                    />
+                    <div class="story-copy">
+                      <blockquote>
+                        <p>
+                          “From our first question to the flight home,
+                          everything was clear, warm, and well organized.”
+                        </p>
+                      </blockquote>
+                      <figcaption>
+                        <strong>Leila A.</strong><span>Kabul, Afghanistan</span>
+                      </figcaption>
+                    </div>
+                  </figure>
+                </div>
+              </div>
+              <button
+                class="carousel-arrow"
+                type="button"
+                data-story-direction="next"
+                aria-label="Next traveler stories"
+              >
+                &#8594;
+              </button>
+            </div>
+          </div>
         </section>
+      </div>
 
-        <!-- Exclusive tour: scenic banner and a small stack of trip photos. -->
-        <section class="tour-banner" aria-labelledby="tour-title">
-            <img class="tour-background" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&amp;fit=crop&amp;w=2000&amp;q=85" alt="Golden-hour light over a mountain landscape" width="2000" height="600" loading="lazy">
-            <div class="tour-mini-collage" aria-hidden="true">
-                <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&amp;fit=crop&amp;w=300&amp;q=80" alt="">
-                <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&amp;fit=crop&amp;w=300&amp;q=80" alt="">
-                <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&amp;fit=crop&amp;w=300&amp;q=80" alt="">
-            </div>
-            <div class="tour-banner-copy">
-                <p class="eyebrow">Curated just for you</p>
-                <h2 id="tour-title">Exclusive <span>Tour</span></h2>
-                <p>Discover exclusive travel experiences designed for unforgettable moments. Explore hidden gems, enjoy premium service, and travel in style.</p>
-                <a class="button button-gold" href="#contact">Explore Now <span aria-hidden="true">&#8594;</span></a>
-            </div>
-            <span class="tour-plane" aria-hidden="true">&#9992;</span>
-        </section>
-
-        <!-- Contact: immediately follows the tour banner; includes validated trip inquiry fields. -->
-        <section id="contact" class="contact-section" aria-labelledby="contact-title">
-            <div class="section-shell contact-layout">
-                <div class="contact-image">
-                    <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Airplane flying above bright clouds" width="1000" height="900" loading="lazy">
-                    <div class="contact-landmarks" aria-hidden="true">
-                        <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&amp;fit=crop&amp;w=500&amp;q=80" alt="">
-                        <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&amp;fit=crop&amp;w=500&amp;q=80" alt="">
-                        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&amp;fit=crop&amp;w=500&amp;q=80" alt="">
-                    </div>
-                    <span class="contact-plane" aria-hidden="true">&#9992;</span>
-                </div>
-                <div class="contact-content">
-                    <p class="eyebrow">Let’s make your next trip happen</p>
-                    <h2 id="contact-title">Contact <span>Us</span></h2>
-                    <p class="contact-intro">Tell us where you want to go and our travel team will help you plan the details.</p>
-                    <form action="#contact" method="get">
-                        <div class="form-row">
-                            <p>
-                                <label for="name">Your Name</label>
-                                <input type="text" id="name" name="name" autocomplete="name" placeholder="Full name" required>
-                            </p>
-                            <p>
-                                <label for="email">Your Email</label>
-                                <input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com" required>
-                            </p>
-                        </div>
-                        <div class="form-row">
-                            <p>
-                                <label for="destination-select">Select Destination</label>
-                                <select id="destination-select" name="destination" required>
-                                    <option value="">Choose a destination</option>
-                                    <option>Asia</option>
-                                    <option>Europe</option>
-                                    <option>Australia</option>
-                                    <option>Africa</option>
-                                    <option>New Zealand</option>
-                                    <option>Somewhere else</option>
-                                </select>
-                            </p>
-                            <p>
-                                <label for="message">Your Message</label>
-                                <textarea id="message" name="message" rows="2" placeholder="Tell us about your plans" required></textarea>
-                            </p>
-                        </div>
-                        <button class="button button-gold" type="submit">Send Message <span aria-hidden="true">&#8594;</span></button>
-                    </form>
-                </div>
-            </div>
-        </section>
+      <!-- Contact: immediately follows the tour banner; includes validated trip inquiry fields. -->
+      <section
+        id="contact"
+        class="contact-section"
+        aria-labelledby="contact-title"
+      >
+        <div class="section-shell contact-layout">
+          <img
+            class="flight-route-marker contact-marker contact-marker-one"
+            src="assets/scroll-plane.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <img
+            class="flight-route-marker contact-marker contact-marker-two"
+            src="assets/scroll-plane.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <img
+            class="flight-route-marker contact-marker contact-marker-three"
+            src="assets/scroll-plane.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <div class="contact-image">
+            <img
+              src="assets/contact-travel-collage.png"
+              alt="Airplane flying above famous world landmarks"
+              width="300"
+              height="137"
+              loading="lazy"
+            />
+          </div>
+          <div class="contact-content">
+            <p class="eyebrow">Let’s make your next trip happen</p>
+            <h2 id="contact-title">Contact <span>Us</span></h2>
+            <p class="contact-intro">
+              Have a question or plan your next trip? We’d love to hear from
+              you!
+            </p>
+            <form action="#contact" method="get">
+              <div class="form-row">
+                <p>
+                  <label for="name">Your Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    autocomplete="name"
+                    placeholder="Your Name"
+                    required
+                  />
+                </p>
+                <p>
+                  <label for="email">Your Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    autocomplete="email"
+                    placeholder="Your Email"
+                    required
+                  />
+                </p>
+              </div>
+              <div class="form-row">
+                <p>
+                  <label for="destination-select">Select Destination</label>
+                  <select id="destination-select" name="destination" required>
+                    <option value="">Select Destination</option>
+                    <option>Asia</option>
+                    <option>Europe</option>
+                    <option>Australia</option>
+                    <option>Africa</option>
+                    <option>New Zealand</option>
+                    <option>Somewhere else</option>
+                  </select>
+                </p>
+                <p>
+                  <label for="message">Your Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="2"
+                    placeholder="Your Message"
+                    required
+                  ></textarea>
+                </p>
+              </div>
+              <button class="button button-gold" type="submit">
+                Send Message <span aria-hidden="true">&#8594;</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer: brand, quick links, contact placeholders, social links, and policies. -->
     <footer class="site-footer">
-        <div class="footer-main section-shell">
-            <a class="brand footer-brand" href="#home" aria-label="Travel Vibes home">
-                <img src="assets/file_00000000474c82119768bdedcf3f3516.png" alt="" width="50" height="50">
-                <span><strong>Travel Vibes</strong><small>Explore. Dream. Discover.</small></span>
-            </a>
-            <div class="footer-column">
-                <h2>Quick Links</h2>
-                <a href="#home">Home</a>
-                <a href="#destinations">Destinations</a>
-                <a href="#about">About</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <div class="footer-column">
-                <h2>Contact Info</h2>
-                <p><span aria-hidden="true">&#9742;</span> +93 XX XXX XXXX</p>
-                <p><span aria-hidden="true">&#9993;</span> hello@youragency.com</p>
-                <p><span aria-hidden="true">&#9906;</span> Kabul, Afghanistan</p>
-            </div>
-            <div class="footer-column">
-                <h2>Follow Us</h2>
-                <p>Follow along for inspiration and new destinations.</p>
-                <div class="social-links" aria-label="Social media">
-                    <a href="#contact" aria-label="Facebook">f</a>
-                    <a href="#contact" aria-label="Instagram">ig</a>
-                    <a href="#contact" aria-label="YouTube">▶</a>
-                    <a href="#contact" aria-label="LinkedIn">in</a>
-                </div>
-            </div>
+      <div class="footer-main section-shell">
+        <a
+          class="brand footer-brand"
+          href="#home"
+          aria-label="Travel Vibes home"
+        >
+          <img
+            src="assets/file_00000000474c82119768bdedcf3f3516.png"
+            alt=""
+            width="50"
+            height="50"
+          />
+          <span
+            ><strong>Travel Vibes</strong
+            ><small>Explore. Dream. Discover.</small></span
+          >
+        </a>
+        <div class="footer-column">
+          <h2>Quick Links</h2>
+          <a href="#home">Home</a>
+          <a href="#destinations">Destinations</a>
+          <a href="#about">About</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Travel Vibes. All rights reserved.</p>
-            <nav aria-label="Legal links">
-                <a href="#contact">Privacy Policy</a>
-                <a href="#contact">Terms of Service</a>
-                <a href="#contact">FAQ</a>
-            </nav>
+        <div class="footer-column">
+          <h2>Contact Info</h2>
+          <p><span aria-hidden="true">&#9742;</span> +93 XX XXX XXXX</p>
+          <p><span aria-hidden="true">&#9993;</span> hello@youragency.com</p>
+          <p><span aria-hidden="true">&#9906;</span> Kabul, Afghanistan</p>
         </div>
+        <div class="footer-column">
+          <h2>Follow Us</h2>
+          <p>Follow along for inspiration and new destinations.</p>
+          <div class="social-links" aria-label="Social media">
+            <a href="#contact" aria-label="Facebook">f</a>
+            <a href="#contact" aria-label="Instagram">ig</a>
+            <a href="#contact" aria-label="YouTube">▶</a>
+            <a href="#contact" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Travel Vibes. All rights reserved.</p>
+        <nav aria-label="Legal links">
+          <a href="#contact">Privacy Policy</a>
+          <a href="#contact">Terms of Service</a>
+          <a href="#contact">FAQ</a>
+        </nav>
+      </div>
     </footer>
-    
-</body>
+    <script>
+      document.querySelectorAll(".stories-carousel").forEach((carousel) => {
+        const storiesWindow = carousel.querySelector(".stories-window");
+        carousel.querySelectorAll("[data-story-direction]").forEach((arrow) => {
+          arrow.addEventListener("click", () => {
+            const direction = arrow.dataset.storyDirection === "next" ? 1 : -1;
+            storiesWindow.scrollBy({
+              left: direction * storiesWindow.clientWidth,
+              behavior: "smooth",
+            });
+          });
+        });
+      });
+
+      const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+      ).matches;
+
+      if (!reduceMotion) {
+        const svgNamespace = "http://www.w3.org/2000/svg";
+        const routeData =
+          "M 46 292 C 160 232 178 58 330 76 C 472 92 428 320 592 322 C 754 324 744 74 896 75 C 1050 76 1098 229 1140 284 C 1190 340 1090 374 930 357 C 730 335 610 370 438 348 C 262 326 111 367 46 292 Z";
+        const flightSections = document.querySelectorAll(
+          "main > .flight-continuity-group, main > section, .site-footer",
+        );
+        const flightAnimations = [];
+
+        flightSections.forEach((section) => {
+          const overlay = document.createElementNS(svgNamespace, "svg");
+          overlay.setAttribute("class", "scroll-flight-overlay");
+          overlay.setAttribute("viewBox", "0 0 1200 400");
+          overlay.setAttribute("preserveAspectRatio", "none");
+          overlay.setAttribute("aria-hidden", "true");
+
+          const route = document.createElementNS(svgNamespace, "path");
+          route.setAttribute("class", "scroll-flight-path");
+          route.setAttribute("d", routeData);
+          overlay.appendChild(route);
+
+          const isTourBanner = section.classList.contains("tour-banner");
+          const airplane = document.createElement(
+            isTourBanner ? "span" : "img",
+          );
+          airplane.setAttribute("class", "scroll-flight-plane");
+          airplane.setAttribute("aria-hidden", "true");
+          if (isTourBanner) {
+            airplane.classList.add("scroll-flight-plane-tour");
+            airplane.textContent = "✈";
+          } else {
+            airplane.setAttribute("src", "assets/scroll-plane.svg");
+            airplane.setAttribute("alt", "");
+          }
+          section.appendChild(overlay);
+          section.appendChild(airplane);
+
+          flightAnimations.push({ section, route, airplane, overlay });
+        });
+
+        const emitFlightCloud = (section, x, y, driftX, driftY) => {
+          const particle = document.createElement("span");
+          particle.className = "flight-cloud-particle";
+          particle.setAttribute("aria-hidden", "true");
+          particle.style.left = `${x}px`;
+          particle.style.top = `${y}px`;
+          particle.style.setProperty("--cloud-drift-x", `${driftX}px`);
+          particle.style.setProperty("--cloud-drift-y", `${driftY}px`);
+          section.appendChild(particle);
+
+          const removeParticle = () => particle.remove();
+          particle.addEventListener("animationend", removeParticle, {
+            once: true,
+          });
+          window.setTimeout(removeParticle, 1900);
+        };
+
+        let flightFrame = 0;
+        const updateFlights = () => {
+          flightFrame = 0;
+          const viewportHeight = window.innerHeight;
+          let needsAnotherFrame = false;
+
+          flightAnimations.forEach((flight) => {
+            const { section, route, airplane } = flight;
+            const bounds = section.getBoundingClientRect();
+            const sectionTop = window.scrollY + bounds.top;
+            const startsAtPageTop =
+              section === flightSections[0] && window.scrollY < 1;
+            const scrollStart = startsAtPageTop
+              ? sectionTop
+              : sectionTop - viewportHeight;
+            const atPageBottom =
+              section === flightSections[flightSections.length - 1];
+            const scrollEnd = atPageBottom
+              ? document.documentElement.scrollHeight - viewportHeight
+              : sectionTop + bounds.height;
+            const progress = Math.max(
+              0,
+              Math.min(
+                1,
+                (window.scrollY - scrollStart) / (scrollEnd - scrollStart),
+              ),
+            );
+            if (typeof section.flightProgress !== "number") {
+              section.flightProgress = progress;
+            }
+            section.flightProgress +=
+              (progress - section.flightProgress) * 0.012;
+            if (Math.abs(progress - section.flightProgress) > 0.001) {
+              needsAnotherFrame = true;
+            } else {
+              section.flightProgress = progress;
+            }
+
+            const routeLength = route.getTotalLength();
+            const distance = routeLength * section.flightProgress;
+            const point = route.getPointAtLength(distance);
+            const previousPoint = route.getPointAtLength(
+              Math.max(0, distance - 1),
+            );
+            const scaleX = section.clientWidth / 1200;
+            const scaleY = section.clientHeight / 400;
+            const angle =
+              (Math.atan2(
+                (point.y - previousPoint.y) * scaleY,
+                (point.x - previousPoint.x) * scaleX,
+              ) *
+                180) /
+                Math.PI +
+              90;
+
+            const planeX = point.x * scaleX;
+            const planeY = point.y * scaleY;
+            const tangentX = (point.x - previousPoint.x) * scaleX;
+            const tangentY = (point.y - previousPoint.y) * scaleY;
+            const tangentLength = Math.hypot(tangentX, tangentY) || 1;
+            const previousTrailPoint = section.flightTrailPoint;
+            if (!previousTrailPoint) {
+              section.flightTrailPoint = { x: planeX, y: planeY };
+            } else {
+              const moved = Math.hypot(
+                planeX - previousTrailPoint.x,
+                planeY - previousTrailPoint.y,
+              );
+              if (moved >= 28) {
+                const sectionIsVisible =
+                  bounds.bottom > 0 && bounds.top < viewportHeight;
+                if (sectionIsVisible) {
+                  const directionX = tangentX / tangentLength;
+                  const directionY = tangentY / tangentLength;
+                  emitFlightCloud(
+                    section,
+                    planeX - directionX * 20,
+                    planeY - directionY * 20,
+                    -directionX * 13,
+                    -directionY * 13,
+                  );
+                }
+                section.flightTrailPoint = { x: planeX, y: planeY };
+              }
+            }
+
+            airplane.style.transform =
+              `translate(${planeX}px, ${planeY}px) ` +
+              `translate(-50%, -50%) rotate(${angle}deg)`;
+          });
+          if (needsAnotherFrame) {
+            flightFrame = window.requestAnimationFrame(updateFlights);
+          }
+        };
+        const scheduleFlightUpdate = () => {
+          if (!flightFrame)
+            flightFrame = window.requestAnimationFrame(updateFlights);
+        };
+
+        window.addEventListener("scroll", scheduleFlightUpdate, {
+          passive: true,
+        });
+        window.addEventListener("resize", scheduleFlightUpdate);
+        scheduleFlightUpdate();
+      }
+    </script>
+  </body>
 </html>
