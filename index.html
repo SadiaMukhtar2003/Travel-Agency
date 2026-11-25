@@ -26,14 +26,29 @@
             ><small>EXPLORE · DISCOVER · EXPERIENCE</small></span
           >
         </a>
-        <ul class="nav-links">
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="primary-navigation">
           <li><a class="active" href="#home">Home</a></li>
           <li><a href="#destinations">Destinations</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <a class="nav-cta" href="#contact"
+        <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
+          <span class="theme-toggle-stars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+          <span class="theme-toggle-moon" aria-hidden="true"></span>
+          <span class="theme-toggle-sun" aria-hidden="true"></span>
+          <span class="theme-toggle-cloud" aria-hidden="true"></span>
+        </button>
+        <a class="nav-cta" href="#book-trip" data-open-booking
           >Plan Your Trip <span aria-hidden="true">&#8594;</span></a
         >
       </nav>
@@ -55,10 +70,18 @@
             class="hero-backdrop"
             src="assets/hero-lake.jpg"
             alt="Turquoise alpine lake surrounded by snowy mountains"
+            data-dark-src="assets/hero-lake.jpg"
+            data-dark-alt="Turquoise alpine lake surrounded by snowy mountains"
+            data-light-src="assets/9b67fe4df9e263d924d8bd6bf1e9839e.jpg"
+            data-light-alt="Bright turquoise lake beneath the sunny mountains of Banff"
             fetchpriority="high"
           />
           <div class="hero-copy">
-            <h1 id="hero-title">Explore the <span>World</span> Together</h1>
+            <h1 id="hero-title" aria-label="Explore the World Together">
+              <span class="hero-title-line">Explore</span>
+              <span class="hero-title-line">the World</span>
+              <span class="hero-title-line">Together</span>
+            </h1>
             <p>
               Discover breathtaking destinations, create unforgettable memories,
               and let us plan your next adventure.
@@ -67,24 +90,24 @@
               >Explore Destinations <span aria-hidden="true">&#8594;</span></a
             >
           </div>
-          <div class="hero-cards" aria-label="Featured destinations">
+          <div class="hero-cards" role="group" aria-label="Featured destinations">
             <figure class="hero-card hero-card-one">
               <img
-                src="assets/santorini.jpg"
-                alt="Santorini's white buildings above the Aegean Sea"
+                src="assets/9b67fe4df9e263d924d8bd6bf1e9839e.jpg"
+                alt=""
                 width="900"
                 height="1200"
               />
-              <figcaption>Santorini <span>Greece</span></figcaption>
+              <figcaption class="hero-card-caption">Santorini <span>Greece</span></figcaption>
             </figure>
             <figure class="hero-card hero-card-two">
               <img
                 src="assets/banff.jpg"
-                alt="Turquoise lake and snowy peaks in Banff National Park"
+                alt=""
                 width="900"
                 height="1200"
               />
-              <figcaption>Banff <span>Canada</span></figcaption>
+              <figcaption class="hero-card-caption">Banff <span>Canada</span></figcaption>
             </figure>
           </div>
           <a class="hero-scroll" href="#highlights"
@@ -231,7 +254,20 @@
         </div>
       </section>
 
-      <!-- Destinations: selectable-looking region tabs, Asia feature, and diamond photo collage. -->
+      <section
+        id="services"
+        class="services-section section-shell"
+        aria-labelledby="services-title"
+      >
+        <div class="services-heading">
+          <p class="eyebrow">Made for your journey</p>
+          <h2 id="services-title">Travel Services <span>in Kabul</span></h2>
+          <p>Helpful support for every step, from booking to arrival.</p>
+        </div>
+        <div class="services-grid" id="services-grid" aria-live="polite"></div>
+      </section>
+
+      <!-- Destinations: region selector, featured details, and photo collage. -->
       <section
         id="destinations"
         class="destinations-section"
@@ -244,37 +280,37 @@
             <span></span>
           </div>
           <ul class="region-list" aria-label="Destination regions">
-            <li>Australia</li>
-            <li>Africa</li>
-            <li>Europe</li>
-            <li class="region-active">Asia</li>
-            <li>New Zealand</li>
+            <li><button type="button" data-region="Australia" aria-pressed="false">Australia</button></li>
+            <li><button type="button" data-region="Africa" aria-pressed="false">Africa</button></li>
+            <li><button type="button" data-region="Europe" aria-pressed="false">Europe</button></li>
+            <li><button class="region-active" type="button" data-region="Asia" aria-pressed="true">Asia</button></li>
+            <li><button type="button" data-region="America" aria-pressed="false">America</button></li>
           </ul>
-          <div class="destination-feature" id="asia">
+          <div class="destination-feature" id="featured-destination">
             <div class="destination-copy">
               <p class="eyebrow">Explore the beauty of</p>
-              <h3>Asia</h3>
+              <h3 id="featured-region-title">Asia</h3>
               <p>
+                <span id="featured-region-description">
                 From ancient temples to modern cities, Asia offers a unique
                 blend of culture, history, and natural beauty. Discover
                 breathtaking landscapes, vibrant traditions, and unforgettable
                 experiences.
+                </span>
               </p>
               <div class="destination-tags">
-                <span><b aria-hidden="true">&#9961;</b> Rich Culture</span
-                ><span><b aria-hidden="true">&#9968;</b> Stunning Nature</span
-                ><span
-                  ><b aria-hidden="true">&#128247;</b> Unforgettable
-                  Moments</span
-                >
+                <span><b aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 10h.01M15 10h.01M9 14h.01M15 14h.01M10 21v-4h4v4" /></svg></b> Rich Culture</span>
+                <span><b aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3 20 6-11 4 7 3-5 5 9H3Z" /><path d="m7 13 2 2 2-1" /></svg></b> Stunning Nature</span>
+                <span><b aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h3l2-3h6l2 3h3v13H4z" /><circle cx="12" cy="13" r="4" /><path d="M18 10h.01" /></svg></b> Unforgettable Moments</span>
               </div>
-              <a class="button button-outline" href="#contact"
+              <a class="button button-outline" href="#contact" id="featured-region-tours"
                 >View All Asia Tours <span aria-hidden="true">&#8594;</span></a
               >
             </div>
             <div
               class="destination-mosaic"
               aria-label="Asian travel destinations"
+              id="featured-region-mosaic"
             >
               <figure class="mosaic-japan">
                 <img
@@ -287,7 +323,7 @@
               </figure>
               <figure class="mosaic-dubai">
                 <img
-                  src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&amp;fit=crop&amp;w=700&amp;q=85"
+                  src="assets/d0d37c4a8930839b1ae325ca9ba8dcdc.jpg"
                   alt="Dubai skyline at dusk"
                   width="500"
                   height="500"
@@ -314,7 +350,7 @@
               </figure>
               <figure class="mosaic-thai">
                 <img
-                  src="https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&amp;fit=crop&amp;w=700&amp;q=85"
+                  src="assets/garden of babur.jpg"
                   alt="Golden temple architecture in Thailand"
                   width="500"
                   height="500"
@@ -330,25 +366,22 @@
       <section class="tour-banner" aria-labelledby="tour-title">
         <img
           class="tour-background"
-          src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&amp;fit=crop&amp;w=2000&amp;q=85"
-          alt="Golden-hour light over a mountain landscape"
+          src="assets/InShot_20261124_005159402.jpg"
+          alt="Alpine lake surrounded by mountains"
           width="2000"
           height="600"
           loading="lazy"
         />
-        <div class="tour-mini-collage" aria-hidden="true">
-          <img
-            src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&amp;fit=crop&amp;w=300&amp;q=80"
-            alt=""
-          />
-          <img
-            src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&amp;fit=crop&amp;w=300&amp;q=80"
-            alt=""
-          />
-          <img
-            src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&amp;fit=crop&amp;w=300&amp;q=80"
-            alt=""
-          />
+        <div class="tour-mini-collage" role="group" aria-label="Choose a tour background image">
+          <button class="tour-mini-photo" type="button" data-tour-background data-tour-src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&amp;fit=crop&amp;w=2000&amp;q=90" aria-label="Use the Cinque Terre coast as the tour background" aria-pressed="false">
+            <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&amp;fit=crop&amp;w=300&amp;q=80" alt="" />
+          </button>
+          <button class="tour-mini-photo" type="button" data-tour-background data-tour-src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&amp;fit=crop&amp;w=2000&amp;q=90" aria-label="Use an alpine lake as the tour background" aria-pressed="false">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&amp;fit=crop&amp;w=300&amp;q=80" alt="" />
+          </button>
+          <button class="tour-mini-photo" type="button" data-tour-background data-tour-src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&amp;fit=crop&amp;w=2000&amp;q=90" aria-label="Use Paris as the tour background" aria-pressed="false">
+            <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&amp;fit=crop&amp;w=300&amp;q=80" alt="" />
+          </button>
         </div>
         <div class="tour-banner-copy">
           <p class="eyebrow">Curated just for you</p>
@@ -358,7 +391,7 @@
             moments. Explore hidden gems, enjoy premium service, and travel in
             style.
           </p>
-          <a class="button button-gold" href="#contact"
+          <a class="button button-gold" href="#book-trip" data-open-booking
             >Explore Now <span aria-hidden="true">&#8594;</span></a
           >
         </div>
@@ -499,8 +532,8 @@
                 <div class="stories-track">
                   <figure class="story-card" id="story-one">
                     <img
-                      src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;w=180&amp;h=180&amp;q=85"
-                      alt="Traveler Daniel"
+                      src="assets/6f9c99a4e39a5833ddf538303962ede9.jpg"
+                      alt="Portrait of Daniel"
                       width="90"
                       height="90"
                       loading="lazy"
@@ -520,8 +553,8 @@
                   </figure>
                   <figure class="story-card" id="story-two">
                     <img
-                      src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;w=180&amp;h=180&amp;q=85"
-                      alt="Traveler Sophia"
+                      src="assets/4e31f865dbc8000af8bdd9e46785d86f.jpg"
+                      alt="Portrait of Sophia"
                       width="90"
                       height="90"
                       loading="lazy"
@@ -542,8 +575,8 @@
                   </figure>
                   <figure class="story-card" id="story-three">
                     <img
-                      src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&amp;fit=crop&amp;w=180&amp;h=180&amp;q=85"
-                      alt="Traveler Amir"
+                      src="assets/acc45cea372b9ea67c4086e3d74a71dd.jpg"
+                      alt="Portrait of Amir"
                       width="90"
                       height="90"
                       loading="lazy"
@@ -562,8 +595,8 @@
                   </figure>
                   <figure class="story-card" id="story-four">
                     <img
-                      src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&amp;fit=crop&amp;w=180&amp;h=180&amp;q=85"
-                      alt="Traveler Leila"
+                      src="assets/86a8a148a5312aa80c74d6a6370bdad7.jpg"
+                      alt="Portrait of Leila"
                       width="90"
                       height="90"
                       loading="lazy"
@@ -578,6 +611,66 @@
                       <figcaption>
                         <strong>Leila A.</strong><span>Kabul, Afghanistan</span>
                       </figcaption>
+                    </div>
+                  </figure>
+                  <figure class="story-card" id="story-five">
+                    <img
+                      src="assets/91f0e5aaf7a1a0cbfaa864d98b249e42.jpg"
+                      alt="Portrait of Mina"
+                      width="90"
+                      height="90"
+                      loading="lazy"
+                    />
+                    <div class="story-copy">
+                      <blockquote>
+                        <p>“Planning our first trip felt simple. The team helped us find a great balance of sightseeing and free time.”</p>
+                      </blockquote>
+                      <figcaption><strong>Mina S.</strong><span>Herat, Afghanistan</span></figcaption>
+                    </div>
+                  </figure>
+                  <figure class="story-card" id="story-six">
+                    <img
+                      src="assets/09dccd5f4dfee4802e02e0a65ff2f4ef.jpg"
+                      alt="Portrait of Farid"
+                      width="90"
+                      height="90"
+                      loading="lazy"
+                    />
+                    <div class="story-copy">
+                      <blockquote>
+                        <p>“Everything was organized clearly, from choosing a hotel to arranging our airport pickup. It made traveling much easier.”</p>
+                      </blockquote>
+                      <figcaption><strong>Farid N.</strong><span>Kabul, Afghanistan</span></figcaption>
+                    </div>
+                  </figure>
+                  <figure class="story-card" id="story-seven">
+                    <img
+                      src="assets/6db04f511657ac3a7f8eaa15f3a32c66.jpg"
+                      alt="Portrait of Laila"
+                      width="90"
+                      height="90"
+                      loading="lazy"
+                    />
+                    <div class="story-copy">
+                      <blockquote>
+                        <p>“We had thoughtful recommendations throughout the trip and could enjoy each place without worrying about the details.”</p>
+                      </blockquote>
+                      <figcaption><strong>Laila R.</strong><span>Mazar-i-Sharif, Afghanistan</span></figcaption>
+                    </div>
+                  </figure>
+                  <figure class="story-card" id="story-eight">
+                    <img
+                      src="assets/703426c310d814db5193ec48ade1c8b8.jpg"
+                      alt="Portrait of Omar"
+                      width="90"
+                      height="90"
+                      loading="lazy"
+                    />
+                    <div class="story-copy">
+                      <blockquote>
+                        <p>“The itinerary was flexible and suited our family well. We came home with wonderful memories and photos.”</p>
+                      </blockquote>
+                      <figcaption><strong>Omar H.</strong><span>Kabul, Afghanistan</span></figcaption>
                     </div>
                   </figure>
                 </div>
@@ -671,6 +764,7 @@
                     <option>Australia</option>
                     <option>Africa</option>
                     <option>New Zealand</option>
+                    <option>America</option>
                     <option>Somewhere else</option>
                   </select>
                 </p>
@@ -688,6 +782,7 @@
               <button class="button button-gold" type="submit">
                 Send Message <span aria-hidden="true">&#8594;</span>
               </button>
+              <p class="booking-status form-status" data-form-status role="status" aria-live="polite"></p>
             </form>
           </div>
         </div>
@@ -703,7 +798,7 @@
           aria-label="Travel Vibes home"
         >
           <img
-            src="assets/file_00000000474c82119768bdedcf3f3516.png"
+            src="assets/file_00000000f8088243be29624f2e84996e.png"
             alt=""
             width="50"
             height="50"
@@ -739,7 +834,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 Travel Vibes. All rights reserved.</p>
+        <p>&copy; <span id="current-year"></span> Travel Vibes. All rights reserved.</p>
         <nav aria-label="Legal links">
           <a href="#contact">Privacy Policy</a>
           <a href="#contact">Terms of Service</a>
@@ -747,186 +842,28 @@
         </nav>
       </div>
     </footer>
-    <script>
-      document.querySelectorAll(".stories-carousel").forEach((carousel) => {
-        const storiesWindow = carousel.querySelector(".stories-window");
-        carousel.querySelectorAll("[data-story-direction]").forEach((arrow) => {
-          arrow.addEventListener("click", () => {
-            const direction = arrow.dataset.storyDirection === "next" ? 1 : -1;
-            storiesWindow.scrollBy({
-              left: direction * storiesWindow.clientWidth,
-              behavior: "smooth",
-            });
-          });
-        });
-      });
-
-      const reduceMotion = window.matchMedia(
-        "(prefers-reduced-motion: reduce)",
-      ).matches;
-
-      if (!reduceMotion) {
-        const svgNamespace = "http://www.w3.org/2000/svg";
-        const routeData =
-          "M 46 292 C 160 232 178 58 330 76 C 472 92 428 320 592 322 C 754 324 744 74 896 75 C 1050 76 1098 229 1140 284 C 1190 340 1090 374 930 357 C 730 335 610 370 438 348 C 262 326 111 367 46 292 Z";
-        const flightSections = document.querySelectorAll(
-          "main > .flight-continuity-group, main > section, .site-footer",
-        );
-        const flightAnimations = [];
-
-        flightSections.forEach((section) => {
-          const overlay = document.createElementNS(svgNamespace, "svg");
-          overlay.setAttribute("class", "scroll-flight-overlay");
-          overlay.setAttribute("viewBox", "0 0 1200 400");
-          overlay.setAttribute("preserveAspectRatio", "none");
-          overlay.setAttribute("aria-hidden", "true");
-
-          const route = document.createElementNS(svgNamespace, "path");
-          route.setAttribute("class", "scroll-flight-path");
-          route.setAttribute("d", routeData);
-          overlay.appendChild(route);
-
-          const isTourBanner = section.classList.contains("tour-banner");
-          const airplane = document.createElement(
-            isTourBanner ? "span" : "img",
-          );
-          airplane.setAttribute("class", "scroll-flight-plane");
-          airplane.setAttribute("aria-hidden", "true");
-          if (isTourBanner) {
-            airplane.classList.add("scroll-flight-plane-tour");
-            airplane.textContent = "✈";
-          } else {
-            airplane.setAttribute("src", "assets/scroll-plane.svg");
-            airplane.setAttribute("alt", "");
-          }
-          section.appendChild(overlay);
-          section.appendChild(airplane);
-
-          flightAnimations.push({ section, route, airplane, overlay });
-        });
-
-        const emitFlightCloud = (section, x, y, driftX, driftY) => {
-          const particle = document.createElement("span");
-          particle.className = "flight-cloud-particle";
-          particle.setAttribute("aria-hidden", "true");
-          particle.style.left = `${x}px`;
-          particle.style.top = `${y}px`;
-          particle.style.setProperty("--cloud-drift-x", `${driftX}px`);
-          particle.style.setProperty("--cloud-drift-y", `${driftY}px`);
-          section.appendChild(particle);
-
-          const removeParticle = () => particle.remove();
-          particle.addEventListener("animationend", removeParticle, {
-            once: true,
-          });
-          window.setTimeout(removeParticle, 1900);
-        };
-
-        let flightFrame = 0;
-        const updateFlights = () => {
-          flightFrame = 0;
-          const viewportHeight = window.innerHeight;
-          let needsAnotherFrame = false;
-
-          flightAnimations.forEach((flight) => {
-            const { section, route, airplane } = flight;
-            const bounds = section.getBoundingClientRect();
-            const sectionTop = window.scrollY + bounds.top;
-            const startsAtPageTop =
-              section === flightSections[0] && window.scrollY < 1;
-            const scrollStart = startsAtPageTop
-              ? sectionTop
-              : sectionTop - viewportHeight;
-            const atPageBottom =
-              section === flightSections[flightSections.length - 1];
-            const scrollEnd = atPageBottom
-              ? document.documentElement.scrollHeight - viewportHeight
-              : sectionTop + bounds.height;
-            const progress = Math.max(
-              0,
-              Math.min(
-                1,
-                (window.scrollY - scrollStart) / (scrollEnd - scrollStart),
-              ),
-            );
-            if (typeof section.flightProgress !== "number") {
-              section.flightProgress = progress;
-            }
-            section.flightProgress +=
-              (progress - section.flightProgress) * 0.012;
-            if (Math.abs(progress - section.flightProgress) > 0.001) {
-              needsAnotherFrame = true;
-            } else {
-              section.flightProgress = progress;
-            }
-
-            const routeLength = route.getTotalLength();
-            const distance = routeLength * section.flightProgress;
-            const point = route.getPointAtLength(distance);
-            const previousPoint = route.getPointAtLength(
-              Math.max(0, distance - 1),
-            );
-            const scaleX = section.clientWidth / 1200;
-            const scaleY = section.clientHeight / 400;
-            const angle =
-              (Math.atan2(
-                (point.y - previousPoint.y) * scaleY,
-                (point.x - previousPoint.x) * scaleX,
-              ) *
-                180) /
-                Math.PI +
-              90;
-
-            const planeX = point.x * scaleX;
-            const planeY = point.y * scaleY;
-            const tangentX = (point.x - previousPoint.x) * scaleX;
-            const tangentY = (point.y - previousPoint.y) * scaleY;
-            const tangentLength = Math.hypot(tangentX, tangentY) || 1;
-            const previousTrailPoint = section.flightTrailPoint;
-            if (!previousTrailPoint) {
-              section.flightTrailPoint = { x: planeX, y: planeY };
-            } else {
-              const moved = Math.hypot(
-                planeX - previousTrailPoint.x,
-                planeY - previousTrailPoint.y,
-              );
-              if (moved >= 28) {
-                const sectionIsVisible =
-                  bounds.bottom > 0 && bounds.top < viewportHeight;
-                if (sectionIsVisible) {
-                  const directionX = tangentX / tangentLength;
-                  const directionY = tangentY / tangentLength;
-                  emitFlightCloud(
-                    section,
-                    planeX - directionX * 20,
-                    planeY - directionY * 20,
-                    -directionX * 13,
-                    -directionY * 13,
-                  );
-                }
-                section.flightTrailPoint = { x: planeX, y: planeY };
-              }
-            }
-
-            airplane.style.transform =
-              `translate(${planeX}px, ${planeY}px) ` +
-              `translate(-50%, -50%) rotate(${angle}deg)`;
-          });
-          if (needsAnotherFrame) {
-            flightFrame = window.requestAnimationFrame(updateFlights);
-          }
-        };
-        const scheduleFlightUpdate = () => {
-          if (!flightFrame)
-            flightFrame = window.requestAnimationFrame(updateFlights);
-        };
-
-        window.addEventListener("scroll", scheduleFlightUpdate, {
-          passive: true,
-        });
-        window.addEventListener("resize", scheduleFlightUpdate);
-        scheduleFlightUpdate();
-      }
-    </script>
+    <dialog class="booking-dialog" id="book-trip" aria-labelledby="booking-title">
+      <div class="booking-dialog-header">
+        <div>
+          <p class="eyebrow">Your next adventure starts here</p>
+          <h2 id="booking-title">Plan your <span>trip</span></h2>
+        </div>
+        <button class="booking-close" type="button" aria-label="Close booking form">&times;</button>
+      </div>
+      <p class="booking-intro">Tell us a little about your plans and our travel team will help you shape the details.</p>
+      <form class="booking-form" id="booking-form">
+        <div class="booking-fields">
+          <p><label for="booking-name">Full name</label><input id="booking-name" name="name" autocomplete="name" required /></p>
+          <p><label for="booking-email">Email address</label><input id="booking-email" name="email" type="email" autocomplete="email" required /></p>
+          <p><label for="booking-destination">Where would you like to go?</label><input id="booking-destination" name="destination" placeholder="Destination" required /></p>
+          <p><label for="booking-date">Preferred departure</label><input id="booking-date" name="date" type="date" /></p>
+          <p><label for="booking-travelers">Travelers</label><input id="booking-travelers" name="travelers" type="number" min="1" max="30" value="2" required /></p>
+          <p><label for="booking-type">Trip style</label><select id="booking-type" name="trip-type"><option>Adventure</option><option>Culture &amp; history</option><option>Relaxation</option><option>Family trip</option><option>Custom itinerary</option></select></p>
+        </div>
+        <p class="booking-submit-row"><button class="button button-gold" type="submit">Send trip request <span aria-hidden="true">&#8594;</span></button></p>
+        <p class="booking-status" id="booking-status" role="status" aria-live="polite"></p>
+      </form>
+    </dialog>
+    <script src="js/main.js"></script>
   </body>
 </html>
