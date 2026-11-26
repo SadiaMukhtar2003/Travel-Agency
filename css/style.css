@@ -1447,13 +1447,29 @@ body {
 }
 
 @media (max-width: 850px) {
-    .nav-wrap { position: relative; justify-content: space-between; gap: .5rem; }
-    .nav-toggle { display: flex; order: 2; }
-    .nav-cta { display: none; order: 5; width: 100%; justify-content: center; }
-    .nav-wrap.is-menu-open .nav-cta { display: inline-flex; }
+    .nav-wrap {
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto auto;
+        justify-content: initial;
+        gap: .5rem;
+    }
+    .brand { grid-column: 1; grid-row: 1; min-width: 0; }
+    .nav-toggle { display: flex; }
+    .theme-toggle {
+        grid-column: 2;
+        grid-row: 1;
+        margin-right: -1.15rem;
+        transform: scale(.8);
+        transform-origin: left center;
+    }
+    .nav-toggle { grid-column: 3; grid-row: 1; }
+    .nav-cta { display: none; width: 100%; justify-content: center; }
+    .nav-wrap.is-menu-open .nav-cta { display: inline-flex; grid-column: 1 / -1; grid-row: 4; }
     .nav-links {
         display: none;
-        order: 4;
+        grid-column: 1 / -1;
+        grid-row: 2;
         width: 100%;
         flex-direction: column;
         align-items: stretch;
@@ -1529,11 +1545,15 @@ body {
     .scroll-flight-plane-tour { font-size: 1.05rem; }
     body { background-attachment: scroll, scroll, scroll, scroll; }
     .site-header { position: absolute; }
-    .nav-wrap { width: calc(100% - 1.25rem); flex-wrap: wrap; justify-content: space-between; gap: .25rem .5rem; min-height: 0; padding-top: .35rem; }
+    .nav-wrap {
+        width: calc(100% - 1.25rem);
+        min-height: 0;
+        padding-top: .35rem;
+    }
     .brand { gap: .4rem; }
     .site-header .brand img { width: 4.2rem; height: 2.8rem; }
     .brand strong { font-size: 1rem; }
-    .nav-links { order: 4; gap: 0; }
+    .nav-links { gap: 0; }
     .nav-links a { font-size: .73rem; }
     .nav-cta { font-size: .7rem; }
     .hero { grid-template-columns: 1fr; min-height: 570px; align-content: center; gap: .75rem; padding: 6.2rem 1.2rem 2rem; }
@@ -1810,11 +1830,6 @@ html[data-theme="light"] .booking-dialog {
 html[data-theme="light"] .booking-dialog::backdrop { background: rgb(15 34 49 / 55%); }
 html[data-theme="light"] .booking-close { color: var(--white); }
 @media (max-width: 850px) {
-    .theme-toggle { order: 2; }
-    .nav-toggle { order: 1; }
-    .nav-links { order: 3; }
-    .nav-wrap.is-menu-open .theme-toggle { margin-left: auto; }
-}
     .destination-mosaic figure:hover { border-color: var(--gold); box-shadow: 0 14px 32px rgb(0 8 22 / 42%); }
     .destination-mosaic figure:hover img { transform: rotate(-45deg) scale(1.5); }
     .reasons-photo-one:hover { transform: rotate(-19deg) translateY(-5px) scale(1.05); }
