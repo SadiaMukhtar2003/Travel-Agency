@@ -438,10 +438,9 @@ h2 span {
     gap: 2rem;
     min-height: clamp(340px, 27vw, 470px);
     padding: 5rem max(1.5rem, calc((100% - var(--content)) / 2)) 2rem;
-Use code with caution.
-overflow: hidden;
-isolation: isolate;
-background: var(--navy-soft);
+    overflow: hidden;
+    isolation: isolate;
+    background: var(--navy-soft);
 }
 .hero::after {
 position: absolute;
